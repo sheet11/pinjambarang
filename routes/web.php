@@ -18,3 +18,6 @@ Route::get('/', function () {
 });
 
 route::resource('/posts', \App\Http\Controllers\PostController::class);
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
