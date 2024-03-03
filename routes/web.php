@@ -17,6 +17,12 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/about', function () {
+    return 'Hello World';
+});
+
+Route::view('/layouts', 'layouts\app', ['name' => 'aldo']);
+
 route::resource('/posts', \App\Http\Controllers\PostController::class);
 Auth::routes();
 
